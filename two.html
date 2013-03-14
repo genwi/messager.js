@@ -2,20 +2,33 @@
 <html>
 <head>
 	<title>Two</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/Messager.js"></script>
 	<script>
 	$(document).ready(function() {
  		Messager.subscribe(function(state) {
+ 			console.log(state);
  			$('#results').html(JSON.stringify(state));
  		});
 	});
 	</script>
+	<style>
+	body{
+	    margin:5em;
+	}
+	textarea{
+	    font-family:Courier;
+	    width:20em;
+	    height:20em;
+	}
+	</style>
 </head>
 <body>
-<h1>Audio Player</h1>
-<div id="results">
-	
-</div>
+<h1>Messager.js Subscriber</h1>
+<fieldset>
+	<legend>The Subscriber receives JSON data as it is published</legend>
+	<textarea id="results"></textarea>
+</fieldset>
 </body>
 </html>

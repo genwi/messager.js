@@ -30,6 +30,9 @@ var Messager = function() {
 
     // Broadcast a new state to all other windows
     var _publish = function(state) {
+        if(typeof state === "string") {
+            state = JSON.parse(state);
+        }
         var msg = {
             window: (lastWindowId = thisWindowId),
             serial: (++lastSerial),
@@ -56,11 +59,13 @@ var Messager = function() {
         // Check it's the right key and there is a value
         if(e.key !== messageKey || !(e.newValue)) { return; }
         var msg = JSON.parse(e.newValue);
+        console.log(msg);
         // Don't repeat messages, or do anything with our own broadcasts
         if((msg.window !== lastWindowId) || (msg.serial !== lastSerial)) {
             lastWindowId = msg.window;
             lastSerial = msg.serial;
             if(receiver) {
+                console.log('in storage', msg.state);
                 receiver(msg.state);
             }
         }
