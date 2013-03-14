@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/Messager.js"></script>
+    <style>
+        #trigger{
+            background:blue;color:white;padding:20px;
+        }
+    </style>
+
+    <script>
+    window.interval;
+    function createInterval() {
+        var i=0;
+        window.interval = setInterval(function() {
+            i++;
+            Messager.publish({
+                action:'play',
+                song: 'Deez Nuts ' + i
+            });
+        }, 800);
+    };
+
+    $(document).ready(function() {
+        $('#trigger').click(function() {
+            clearInterval(window.interval);
+            createInterval();
+        });
+    });
+
+    </script>
+</head>
+<body>
+<h1>Playlist</h1>
+<div id="trigger">
+    Song
+</div>
+</body>
+</html>             
