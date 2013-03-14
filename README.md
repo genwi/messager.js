@@ -8,6 +8,6 @@ PubSub Messaging using localStorage API
 
 See the [demo](https://github.com/genwi/messager.js/tree/master/demo) code for usage. 
 
-Try out the demo by opening [this](http://repo-examples.s3.amazonaws.com/messager/demo/one.html) and [this](http://repo-examples.s3.amazonaws.com/messager/demo/two.html) side-by-side in a browser.
+Try out the demo by opening [this](http://repo-examples.s3.amazonaws.com/messager/demo/publisher.html) and [this](http://repo-examples.s3.amazonaws.com/messager/demo/subscriber.html) side-by-side in a browser.
 
 Basically, it lets you communicate between browser windows 
