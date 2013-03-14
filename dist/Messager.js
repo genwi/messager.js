@@ -1,5 +1,9 @@
-var Messager = function() {
-
+/*! Messager.js - v0.1.0 - 2013-03-14
+* https://github.com/darius/Messager.js
+* Copyright (c) 2013 radius; Licensed MIT */
+var Messager = (function() {
+    "use strict";
+    
     // the key to store our messages
     var messageKey = '$messaging';
 
@@ -76,4 +80,4 @@ var Messager = function() {
         publish: _publish,
         getState: _getState
     };
-}();
+})();

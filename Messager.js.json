@@ -1,0 +1,26 @@
+{
+  "name": "Messager",
+  "title": "Messager.js",
+  "description": "PubSub Messaging using localStorage API",
+  "version": "0.1.0",
+  "homepage": "https://github.com/darius/Messager.js",
+  "author": {
+    "name": "radius",
+    "email": "darius@genwi.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/darius/Messager.js.git"
+  },
+  "bugs": "https://github.com/darius/Messager.js/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/darius/Messager.js/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
